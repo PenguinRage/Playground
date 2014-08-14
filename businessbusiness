@@ -1,0 +1,18 @@
+Possible Business Requirements 
+
+1. Customers should be allocated to seats promptly and efficently
+2. Food inventory control and purchasing information should be managed in a way that expedites the operation of the restaurant at the same time it contributes to good excellent food/dishes quality.
+
+3. The cook and kitchen hands, should be able to find information on recipes and preparations in a manner devoid of difficulties at the same time that notes/updats on existent recipes should be included.
+4. Management should be able to run marketing campaign to promote coporate lunches.
+
+Translate Technical Functional requirements
+
+1. The system will allow patron reistration from a location outside the restaurant premises using online facilties.
+
+2.The system must allow patrons to book tables for a number of people for lunch or dinner.
+3.The system must allow patrons to choose a combination of meals from a set menu.
+
+4. The system must display set menu and special daily menu for a number of weeks in advance.
+5. The system should allow for patrons to select a wine selection
+6. The system must display a list of available wines and their prices.

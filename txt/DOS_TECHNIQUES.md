@@ -98,3 +98,55 @@ If size is not specified, displays current size.
 /C - NTFS only: Skips checking of cycles within the folder structure.
 /B - NTFS only: Re-evaluates bad clusters on the volume (implies /R)
 ```
+
+#### Diskpart - Microsoft Partitioning Tool
+
+```
+diskpart
+```
+
+### System Information
+
+```
+systeminfo | more
+```
+
+#### Listing available servers
+
+```
+net view
+```
+
+#### Gather information on server - remote access
+
+```
+systeminfo /S server_name
+```
+
+#### Performance Monitor
+
+```
+perfmon
+```
+
+#### File Checker - for corrupted or missing files
+
+```
+sfc /SCANNOW
+```
+
+#### Driver Information
+
+```
+driverquery | more
+```
+
+### Monitoring Active Internet Services
+
+```
+netstat [-a] [-n] [-b]
+-a -- Displays all connections and listening ports
+-n -- Displays addresses and port numbers in numerical form
+-b -- Displays the executable involved in each connection (note: also provides PID)
+
+```

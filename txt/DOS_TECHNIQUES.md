@@ -208,3 +208,70 @@ netsh interface ip set dnsservers name=”Local Area Connection” source=dhcp
 ```
 
 ### Windows Registery
+
+#### List of Operations
+
+```
+REG QUERY [ROOT\]RegKey /v ValueName [/s]
+REG QUERY [ROOT\]RegKey /ve --This returns the (default) value
+
+REG ADD [ROOT\]RegKey /v ValueName [/t DataType] [/S Separator] [/d Data] [/f]
+REG ADD [ROOT\]RegKey /ve [/d Data] [/f] -- Set the (default) value
+
+REG DELETE [ROOT\]RegKey /v ValueName [/f]
+REG DELETE [ROOT\]RegKey /ve [/f] -- Remove the (default) value
+REG DELETE [ROOT\]RegKey /va [/f] -- Delete all values under this key
+
+REG COPY \[\\SourceMachine\][ROOT\]RegKey \[\\DestMachine\][ROOT\]RegKey
+
+REG EXPORT [ROOT\]RegKey FileName.reg
+REG IMPORT FileName.reg
+REG SAVE [ROOT\]RegKey FileName.hiv
+REG RESTORE \\MachineName\[ROOT]\KeyName FileName.hiv
+
+REG LOAD KeyName FileName
+REG UNLOAD KeyName
+
+REG COMPARE [ROOT\]RegKey [ROOT\]RegKey [/v ValueName] [Output] [/s]
+REG COMPARE [ROOT\]RegKey [ROOT\]RegKey [/ve] [Output] [/s]
+```
+
+##### Key:
+
+```
+   ROOT :
+         HKLM = HKey_Local_machine (default)
+         HKCU = HKey_current_user
+         HKU  = HKey_users
+         HKCR = HKey_classes_root
+
+   ValueName : The value, under the selected RegKey, to edit.
+               (default is all keys and values)
+
+   /d Data   : The actual data to store as a "String", integer etc
+
+   /f        : Force an update without prompting "Value exists, overwrite Y/N"
+
+   \\Machine : Name of remote machine - omitting defaults to current machine.
+                Only HKLM and HKU are available on remote machines.
+
+   FileName  : The filename to save or restore a registry hive.
+
+   KeyName   : A key name to load a hive file into. (Creating a new key)
+
+   /S        : Query all subkeys and values.
+
+   /S Separator : Character to use as the separator in REG_MULTI_SZ values
+                  the default is "\0"
+
+   /t DataType  : REG_SZ (default) | REG_DWORD | REG_EXPAND_SZ | REG_MULTI_SZ
+
+   /reg:32   : Force REG.exe to write to the 32-bit registry location
+   /reg:64   : Force REG.exe to write to the 64-bit registry location
+
+             By default a 32-bit process (such as an SCCM client or a 32 bit MSI installer)
+             on a 64 bit machine, will use a 32-bit view of the registry: HKLM\SOFTWARE\Wow6432Node
+             Use the /REG switch to over-ride this. See Q305097 for more details.
+
+   Output    : /od (only differences) /os (only matches) /oa (all) /on (no output)
+```

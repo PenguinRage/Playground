@@ -291,13 +291,13 @@ schtasks /query
 #### Creating tasks
 
 ```
-schtasks /create /tn "Task Name" /tr "Path" /sc "Schedule Time"
+schtasks /create /tn "Task Name" /tr "Path" /sc "schedule_time"
 ```
 
 #### Deleting tasks
 
 ```
-schtasks /delete /tn "Task Name"
+schtasks /delete /tn "task_name"
 ```
 
 ##### Additional Information:
@@ -345,3 +345,26 @@ SC [server_name] qc service_name
 ```
 
 Thorough Explaination on [SC](https://technet.microsoft.com/en-au/library/bb490995.aspx)
+
+### Additional available commands
+
+```
+convert -- Displays or alters the compression of files on NTFS partions
+exe2bin -- Converts .exe files to binary format
+shutdown -- shutdown operation
+finger -- Displays information about a user on a specified system running the finger service. Output varies based on the remote system.
+hostname -- reveals hostname
+ftp -- File Transfer Protocol
+rcp -- Copies files to and from computer running the RCP service.
+lpr -- Sends a print job to a network printer
+arp -- Displays and modifies the IP-to-Physical address translation tables used by address resolution protocol
+getmac -- Returns mac address
+pathping -- Used for testing ping with limitations
+nslookup -- Displays information that you can use to diagnose Domain Name System (DNS) infrastructure.
+Doskey /history -- Dos command history
+powercfg -- Controls the power settings on a system.
+cscript -- Windows Script Host that provides command-line options for setting script properties.
+wscript -- Set the script host properties.
+route -- Manipulates network routing tables.
+net view -- network view
+```

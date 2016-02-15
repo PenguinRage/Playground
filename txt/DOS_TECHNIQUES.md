@@ -1,7 +1,7 @@
 MS-DOS definitions & commands
 =============================
 
-Basic information on the tools available on CMD for all Windows machines.
+Basic information on the tools available on CMD for all Windows machines. ![](http://www.minuszos.hu/wp-content/uploads/2013/12/DOS-prompt.gif)
 
 Command Summaries:
 ------------------
@@ -275,3 +275,27 @@ REG COMPARE [ROOT\]RegKey [ROOT\]RegKey [/ve] [Output] [/s]
 
    Output    : /od (only differences) /os (only matches) /oa (all) /on (no output)
 ```
+
+### Task Scheduling
+
+#### Query tasks
+
+```
+schtasks /query
+```
+
+#### Creating tasks
+
+```
+schtasks /create /tn "Task Name" /tr "Path" /sc "Schedule Time"
+```
+
+#### Deleting tasks
+
+```
+schtasks /delete /tn "Task Name"
+```
+
+##### Additional Information:
+
+Thorough Explaination on [Schtasks](https://technet.microsoft.com/en-us/library/cc725744.aspx)

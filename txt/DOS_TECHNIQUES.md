@@ -11,7 +11,7 @@ Command Summaries:
 ### Select single command - Summarised with options
 
 ```DOS
-command name /?
+command_name /?
 
 ```
 
@@ -163,6 +163,8 @@ tracert url
 
 ### Network Services
 
+Requirement: Start -> services.msc -> Routing and Remote Access -- needs to be Enabled
+
 ```
 netsh
 ```
@@ -278,7 +280,7 @@ REG COMPARE [ROOT\]RegKey [ROOT\]RegKey [/ve] [Output] [/s]
    Output    : /od (only differences) /os (only matches) /oa (all) /on (no output)
 ```
 
-### Task Scheduling
+### Basic Task Scheduling
 
 #### Query tasks
 
@@ -301,3 +303,45 @@ schtasks /delete /tn "Task Name"
 ##### Additional Information:
 
 Thorough Explaination on [Schtasks](https://technet.microsoft.com/en-us/library/cc725744.aspx)
+
+### Remote PC Control
+
+Requirement: Windows Features -> Enable Telnet Client & Telnet Server
+
+```
+telnet server_address [port]
+```
+
+### Windows NT Service Controller Services
+
+#### Service Controller Information
+
+```
+SC
+```
+
+#### Query the Services/ a service
+
+```
+SC query [service_name]
+```
+
+#### Stop a service
+
+```
+SC [server_name] stop service_name
+```
+
+#### Start a service
+
+```
+SC [server_name] start service_name
+```
+
+#### Configuration details of Service
+
+```
+SC [server_name] qc service_name
+```
+
+Thorough Explaination on [SC](https://technet.microsoft.com/en-au/library/bb490995.aspx)

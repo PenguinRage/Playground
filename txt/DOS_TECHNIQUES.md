@@ -346,13 +346,72 @@ SC [server_name] qc service_name
 
 Thorough Explaination on [SC](https://technet.microsoft.com/en-au/library/bb490995.aspx)
 
+### Advanced File Management
+
+#### Encryption and Decryption
+
+```
+CIPHER
+```
+
+##### Options:
+
+```
+/A -- AddUser - encryption to unique user
+/E -- Encryption
+/D -- Decryption
+/X -- Create keys for copying to another machine/pen drive <to provide access>
+/W -- Removes data from available unused disk space on the entire volume.
+      <Permanent deletion to deleted files>
+```
+
+#### File Allocation Table (FAT) and NTFS file systems Tools
+
+FSUTIL is a powerful command-line utility that can provide very technical information about your computer's drives, or if utilized incorrectly can cause damage to the file system.
+
+```
+fsutil
+```
+
+##### Supported Commands
+
+Warning: use this command at your own risk...
+
+```
+fsutil 8dot3name: 8dot3name management
+fsutil behavior: Control file system behavior
+fsutil dirty: Manage volume dirty bit
+fsutil file: File specific commands
+fsutil fsinfo: File system information
+fsutil hardlink: Hardlink management
+fsutil objectid: Object ID management
+fsutil quota: Quota management
+fsutil repair: Self healing management
+fsutil reparsepoint: Reparse point management
+fsutil resource: Transactional Resource Manager management
+fsutil sparse: Sparse file control
+fsutil transaction: Transaction management
+fsutil usn: USN management
+fsutil volume: Volume management
+```
+
+Thorough Explaination on [Fsutil](https://technet.microsoft.com/en-us/library/cc753059.aspx)
+
 ### Additional available commands
+
+Remember help will offer examples, syntax for the command you want.
+
+```
+command_name /?
+```
+
+Other commands note worthy for consideration
 
 ```
 convert -- Displays or alters the compression of files on NTFS partions
 exe2bin -- Converts .exe files to binary format
 shutdown -- shutdown operation
-finger -- Displays information about a user on a specified system running the finger service. Output varies based on the remote system.
+finger -- Displays information about a user on a specified system running the finger service.
 hostname -- reveals hostname
 ftp -- File Transfer Protocol
 rcp -- Copies files to and from computer running the RCP service.

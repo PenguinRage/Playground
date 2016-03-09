@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS=-std=c99 -g -Wall -fsanitize=address
+CFLAGS=-std=c11 -g -Wall -fsanitize=address
 
 TARGETS=todo
 

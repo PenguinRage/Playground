@@ -1,6 +1,0 @@
-#!/bin/bash
-function love(){
-screenfetch | lolcat 
-acpi -tb |head -2 |sed "s/ 0:/:/g" |lolcat
-}
-love
